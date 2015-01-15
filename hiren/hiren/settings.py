@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django-taggit',
+    'gittag'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,8 +60,12 @@ WSGI_APPLICATION = 'hiren.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'hiren_tag',
+        'USER': 'prism',
+        'PASSWORD': 'prism2123',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -68,7 +74,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
 
 USE_I18N = True
 
